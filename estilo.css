@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+/* MENU */
+.contenedor-header {
+    background: #1e2326; /* Fondo oscuro para la cabecera */
+    position: fixed; /* La cabecera permanece fija en la parte superior */
+    width: 100%; /* La cabecera ocupa todo el ancho de la pantalla */
+    top: 0; /* Se alinea al borde superior */
+    left: 0; /* Se alinea al borde izquierdo */
+    z-index: 99; /* Se coloca en una capa superior para mantenerse visible */
+}
+
+.contenedor-header header {
+    max-width: 1100px; /* Ancho máximo del contenido dentro de la cabecera */
+    margin: auto; /* Centra el contenido dentro de la cabecera */
+    display: flex; 
+    justify-content: space-between; /* Espacio entre los elementos para alinearlos */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    padding: 5px 20px; /* Espaciado interno en la cabecera */
+}
+
+.contenedor-header header .logo a {
+    font-family: 'Righteous'; /* Fuente personalizada para el logo */
+    font-size: 36px; /* Tamaño de letra del logo */
+    color: #ffc0cb; /* Color de texto rosado para el logo */
+    text-decoration: none; /* Sin subrayado en el texto del logo */
+}
+
+.contenedor-header header ul {
+    display: flex; /* Aplica flexbox para alinear elementos de la lista en fila */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+.contenedor-header header nav ul li a {
+    text-align: none; /* Alineación de texto (opción no funcional en CSS) */
+    color: #fff; /* Color blanco para los enlaces */
+    margin: 0 15px; /* Espaciado entre los enlaces */
+    padding: 3px; /* Espaciado interno en los enlaces */
+    transition: .5s; /* Transición de color para efecto de hover */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: #ffc0cb; /* Color rosado al pasar el cursor sobre el enlace */
+}
+
+.nav-responsive {
+    background-color: #ffc0cb; /* Fondo rosado para el menú en vista responsive */
+    color: #fff; /* Color de texto blanco para el menú responsive */
+    padding: 5px 10px; /* Espaciado interno del menú responsive */
+    border-radius: 5px; /* Bordes redondeados para el menú responsive */
+    cursor: pointer; /* Cursor de mano al pasar sobre el menú responsive */
+    display: none; /* Oculta el menú responsive por defecto */
+}
+/* SECCION I N I C I O */
+.inicio {
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), 
+    url(img/fondo.jpg); /* Fondo con degradado y una imagen de fondo */
+    background-size: cover; /* La imagen de fondo cubre toda la pantalla */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    color: #fff; /* Color de texto blanco */
+    display: flex; /* Diseño en flexbox para centrar contenido */
+    align-items: center; /* Centrado vertical de elementos */
+}
+
+.inicio .contenido-banner {
+    padding: 20px; /* Espaciado interno del contenido */
+    background-color: #1e2326; /* Fondo oscuro para destacar el contenido */
+    max-width: 350px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrado horizontal */
+    text-align: center; /* Centrado de texto */
+    border-radius: 40px; /* Bordes redondeados */
+}
+
+.inicio .contenido-banner img {
+    margin-top: 40px; /* Espaciado superior para la imagen */
+    border: 10px solid #ffc0cb; /* Borde rosado alrededor de la imagen */
+    display: block; /* Imagen en bloque para el centrado */
+    width: 80%; /* Imagen al 80% del ancho del contenedor */
+    margin: auto; /* Centrado de la imagen */
+    border-radius: 100%; /* Imagen circular */
+}
+
+.inicio .contenido-banner h1 {
+    margin-top: 40px; /* Espaciado superior */
+    font-size: 42px; /* Tamaño de fuente del título */
+    font-family: 'Righteous'; /* Fuente personalizada */
+}
+
+.inicio .contenido-banner h2 {
+    font-size: 15px; /* Tamaño de fuente subtítulo */
+    font-weight: normal; /* Peso de fuente normal */
+}
+
+.inicio .contenido-banner .redes a {
+    color: #fff; /* Color de iconos de redes sociales */
+    display: inline-block; /* Bloque en línea para centrado */
+    text-decoration: none; /* Sin subrayado */
+    border: 1px solid #fff; /* Borde blanco */
+    border-radius: 100%; /* Iconos circulares */
+    width: 42px; /* Ancho de icono */
+    height: 42px; /* Altura de icono */
+    line-height: 42px; /* Centrado de texto en icono */
+    margin: 40px 5px; /* Espaciado alrededor de los iconos */
+    font-size: 20px; /* Tamaño de fuente */
+    transition: .3s; /* Transición para efecto hover */
+}
+
+.inicio .contenido-banner .redes a:hover {
+    background-color: #ffc0cb; /* Color de fondo rosado al hacer hover */
+}
+
+.sobremi {
+    background-color: #1e2326; /* Fondo oscuro */
+    color: #fff; /* Color de texto blanco */
+    padding: 50px 20px; /* Espaciado interno */
+}
+
+.sobremi .contenido-seccion {
+    max-width: 1100px; /* Ancho máximo del contenido */
+    margin: auto; /* Centrado del contenido */
+}
+
+.sobremi h2 {
+    font-size: 48px; /* Tamaño de fuente del encabezado */
+    font-family: 'Righteous'; /* Fuente personalizada */
+    text-align: center; /* Centrado del encabezado */
+    padding: 20px 0; /* Espaciado alrededor del encabezado */
+}
+
+.sobremi .contenido-seccion p {
+    font: 18px; /* Tamaño de fuente para párrafos */
+    line-height: 22px; /* Altura de línea para legibilidad */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.sobremi .contenido-seccion p span {
+    color: #ffc0cb; /* Texto resaltado en rosado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.sobremi .fila {
+    display: flex; /* Diseño en flexbox para disposición en fila */
+}
+
+.sobremi .fila .col {
+    width: 50%; /* Columnas que ocupan 50% del ancho cada una */
+}
+
+.sobremi .fila .col h3 {
+    font-size: 28px; /* Tamaño de fuente para subtítulos */
+    font-family: 'Righteous'; /* Fuente personalizada */
+    margin-bottom: 25px; /* Espaciado inferior */
+}
+
+.sobremi .fila .col ul {
+    list-style: none; /* Quita los puntos de la lista */
+}
+
+.sobremi .fila .col ul li {
+    margin: 12px 0; /* Espaciado entre los elementos de la lista */
+}
+
+.sobremi .fila .col ul li strong {
+    display: inline-block; /* Bloque en línea para formato */
+    color: #ffc0cb; /* Color rosado para texto importante */
+    width: 130px; /* Ancho de bloque para alineación */
+}
+
+.sobremi .fila .col ul li span {
+    background-color: #ffc0cb; /* Fondo rosado */
+    padding: 3px; /* Espaciado interno */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.sobremi .fila .col .contenedor-intereses {
+    display: flex; /* Flexbox para disposición de los intereses */
+    flex-wrap: wrap; /* Flex-wrap para ajustar elementos */
+}
+
+.sobremi .fila .col .contenedor-intereses .interes {
+    width: 100px; /* Tamaño de cada bloque de interés */
+    height: 100px; /* Altura de cada bloque */
+    background-color: #252A2E; /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0 15px 15px 0; /* Margen entre bloques */
+    display: flex; /* Flexbox para centrado de contenido */
+    flex-direction: column; /* Alineación en columna */
+    align-items: center; /* Alineación centrada */
+    justify-content: center; /* Centrado vertical */
+    transition: .3s; /* Transición para efecto hover */
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover {
+    background-color: #ffc0cb; /* Color de fondo rosado al hacer hover */
+}
+
+.sobremi .fila .col .contenedor-intereses .interes i {
+    font-size: 30px; /* Tamaño de icono dentro de cada bloque */
+    margin-bottom: 10px; /* Espaciado inferior para icono */
+}
+
+/* SECCION CURRICULUM */
+.curriculum {
+    background-color: #1e2326; /* Fondo oscuro para la sección de curriculum */
+    color: #fff; /* Color de texto blanco */
+    padding: 50px 20px; /* Espaciado interno en la sección */
+}
+
+.curriculum .contenido-seccion {
+    max-width: 1100px; /* Ancho máximo del contenido */
+    margin: auto; /* Centra el contenido */
+}
+
+.curriculum h2 {
+    font-size: 48px; /* Tamaño de fuente del título */
+    font-family: 'Righteous'; /* Fuente personalizada */
+    text-align: center; /* Centrado del título */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+}
+
+.curriculum .fila {
+    display: flex; /* Flexbox para organizar elementos en fila */
+    justify-content: space-between; /* Espacio entre las columnas */
+}
+
+.curriculum .fila .col {
+    width: 49%; /* Columnas que ocupan aproximadamente la mitad del ancho */
+    padding: 0 20px; /* Espaciado lateral */
+    margin: auto; /* Centrado de la columna */
+}
+
+.curriculum .fila .col h3 {
+    font-size: 28px; /* Tamaño de fuente para subtítulos */
+    font-family: 'Righteous'; /* Fuente personalizada */
+    margin-bottom: 25px; /* Espaciado inferior */
+}
+
+.curriculum .fila .izquierda {
+    border-right: 2px solid #252A2E; /* Borde derecho para separar secciones */
+}
+
+.curriculum .fila .item {
+    padding: 25px; /* Espaciado interno del bloque */
+    margin-bottom: 30px; /* Espaciado inferior entre bloques */
+    background-color: #252A2E; /* Fondo oscuro del bloque */
+    position: relative; /* Posicionamiento relativo para conectar líneas */
+}
+
+.curriculum .fila .item h4 {
+    font-size: 20px; /* Tamaño de fuente de los encabezados */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.curriculum .fila .item .casa {
+    color: #ffc0cb; /* Color rosado para resaltar el nombre de la institución */
+    font-size: 22px; /* Tamaño de fuente mayor para resaltar */
+    font-weight: bold; /* Texto en negrita */
+    display: block; /* Mostrar en bloque */
+}
+
+.curriculum .fila .item .fecha {
+    display: block; /* Mostrar en bloque */
+    color: #ffc0cb; /* Color rosado para resaltar las fechas */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.curriculum .fila .item p {
+    line-height: 24px; /* Altura de línea para legibilidad */
+}
+
+.curriculum .fila .izq {
+    border-right: 2px solid #ffc0cb; /* Borde rosado a la derecha */
+    margin-right: 20px; /* Espaciado derecho */
+}
+
+.curriculum .fila .item .conectori {
+    height: 2px; /* Altura de la línea de conexión */
+    background-color: #ffc0cb; /* Color rosado para la línea */
+    width: 47px; /* Ancho de la línea */
+    position: absolute; /* Posicionamiento absoluto para conectar a un elemento */
+    top: 50%; /* Posición centrada verticalmente */
+    right: -47px; /* Posición alineada a la derecha */
+    z-index: 5; /* Colocar en capa superior */
+}
+
+.curriculum .fila .item .conectori .circuloi {
+    display: block; /* Mostrar en bloque */
+    height: 10px; /* Tamaño de altura del círculo */
+    width: 10px; /* Tamaño de ancho del círculo */
+    border-radius: 50%; /* Bordes redondeados para crear un círculo */
+    background-color: #ffc0cb; /* Color de fondo rosado */
+    float: right; /* Alineación a la derecha */
+    position: relative; /* Posición relativa al contenedor */
+    bottom: 4px; /* Ajuste de posición hacia abajo */
+}
+
+.curriculum .fila .item .conectord {
+    height: 2px; /* Altura de la línea de conexión */
+    background-color: #ffc0cb; /* Color rosado de la línea */
+    width: 47px; /* Ancho de la línea */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Posición centrada verticalmente */
+    left: -47px; /* Posición alineada a la izquierda */
+    z-index: 5; /* Colocación en capa superior */
+}
+
+.curriculum .fila .item .conectord .circulod {
+    display: block; /* Mostrar en bloque */
+    height: 10px; /* Tamaño de altura del círculo */
+    width: 10px; /* Tamaño de ancho del círculo */
+    border-radius: 50%; /* Bordes redondeados para crear un círculo */
+    background-color: #ffc0cb; /* Color de fondo rosado */
+    float: left; /* Alineación a la izquierda */
+    position: relative; /* Posición relativa */
+    bottom: 4px; /* Ajuste de posición hacia abajo */
+}
+
+/* SECCION S K I L L S */
+.skills{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.skills .fila{
+    display: flex;
+    
+}
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+    margin: auto;
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skill .progreso{
+    background-color: #ffc0cb;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+.skills .skill .barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #ffc0cb;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/* Estas clases se agregaran dinamicamente mediante javascript */
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0%{width: 0%;}
+    100%{width: 45%;}
+}
+
+.skills .skill .python{
+    width: 0%;
+    animation: 2s python forwards;
+}
+@keyframes python {
+    0%{width: 0%;}
+    100%{width: 30%;}
+}
+
+.skills .skill .lenc{
+    width: 0%;
+    animation: 2s lenc forwards;
+}
+@keyframes lenc {
+    0%{width: 0%;}
+    100%{width: 50%;}
+}
+
+/* SECCION CONTACTO */
+.contacto{
+    background-image: url(img/contact_bg.png);
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+    text-align:center;
+}
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+    text-align:center;
+    margin: auto;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+    text-align:center;
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffc0cb;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffc0cb;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+/* SECCION RESPONSIVE */
+/* Media query para pantallas de un ancho máximo de 980px */
+@media screen and (max-width:980px) {
+    nav {
+        display: none; /* Oculta el menú de navegación en pantallas más pequeñas */
+    }
+    .nav-responsive {
+        display: block; /* Muestra el botón de menú responsive */
+    }
+    nav.responsive {
+        display: block; /* Muestra el menú de navegación cuando es responsive */
+        position: absolute; /* Posicionamiento absoluto para el menú desplegable */
+        right: 0; /* Alinea el menú a la derecha */
+        top: 75px; /* Espacio superior para evitar el encabezado */
+        background-color: #252A2E; /* Color de fondo oscuro para el menú desplegable */
+        width: 180px; /* Ancho del menú desplegable */
+    }
+    nav.responsive ul {
+        display: block !important; /* Asegura que la lista del menú se muestre en bloque */
+    }
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff; /* Borde inferior blanco entre elementos del menú */
+        padding: 10px 0; /* Espaciado interno de los elementos del menú */
+    }
+}
+
+/* Media query para pantallas de un ancho máximo de 700px */
+@media screen and (max-width:700px) {
+    .sobremi .fila {
+        display: block; /* Cambia el diseño a bloque para adaptarse a pantallas pequeñas */
+    }
+    .sobremi .fila .col {
+        width: fit-content; /* Ajusta el ancho de la columna según el contenido */
+    }
+
+    .skills .fila {
+        display: block; /* Cambia el diseño de habilidades a bloque en pantallas pequeñas */
+    }
+    .skills .fila .col {
+        width: 100%; /* Ocupa todo el ancho para cada columna de habilidades */
+    }
+    .skills .fila .col .barra-skill {
+        width: 100%; /* Barra de habilidad ocupa todo el ancho de la columna */
+    }
+
+    .curriculum .fila {
+        display: block; /* Cambia el diseño de curriculum a bloque en pantallas pequeñas */
+    }
+    .curriculum .fila .col {
+        width: 90%; /* Columna del curriculum ocupa el 90% del ancho */
+    }
+    .curriculum .fila .derecha {
+        margin-left: 20px; /* Espaciado izquierdo adicional en la columna derecha */
+    }
+
+    .contacto .fila {
+        display: block; /* Cambia el diseño de contacto a bloque en pantallas pequeñas */
+    }
+    .contacto .fila .col {
+        width: 100%; /* Columna de contacto ocupa todo el ancho disponible */
+    }
+}
